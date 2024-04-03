@@ -1,11 +1,25 @@
 package metier.entities;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "EMPLOYEE")
 public class Employee implements Serializable{
+@Id
+@Column (name="code")
+@GeneratedValue (strategy=GenerationType.IDENTITY)
 private Long idEmployee;
+
+@Column (name="nom")
 private String nomEmployee;
+
+@Column (name="prenom")
 private String prenomEmployee;
 private double salaire;
-
 public Employee() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -40,10 +54,8 @@ public double getSalaire() {
 public void setSalaire(double salaire) {
 	this.salaire = salaire;
 }
-@Override
-public String toString() {
-	return "Employee [idEmployee=" + idEmployee + ", nomEmployee=" + nomEmployee + ", prenomEmployee=" + prenomEmployee
-			+ ", salaire=" + salaire + "]";
-}
+
+
+
 
 }
