@@ -42,10 +42,22 @@ value="${employee.prenomEmployee}"/>
 <label class="control-label">salaire :</label>
 <input type="text" name="salaire" class="form-control" value="${employee.salaire}"/>
 </div>
+<div class="form-group">
+    <label class="control-label">Département :</label>
+    <select name="departement" class="form-control">
+        <option value="${employee.departement.idDep}" selected>${employee.departement.nomDep}</option>
+        <c:forEach items="${depModel.departements}" var="dep">
+            <c:if test="${dep.idDep != employee.departement.idDep}">
+                <option value="${dep.idDep}">${dep.nomDep}</option>
+            </c:if>
+        </c:forEach>
+    </select>
+</div>
+
 <div>
 <button type="submit" class="btn btn-primary">Modifier</button>
 </div>
-</div>s
+</div>
 </form>
 </div>
 </div>

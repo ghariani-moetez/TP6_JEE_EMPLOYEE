@@ -24,12 +24,7 @@ public Employee() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Employee(String nomEmployee, String prenomEmployee, double salaire) {
-	super();
-	this.nomEmployee = nomEmployee;
-	this.prenomEmployee = prenomEmployee;
-	this.salaire = salaire;
-}
+
 public Long getIdEmployee() {
 	return idEmployee;
 }
@@ -53,6 +48,22 @@ public double getSalaire() {
 }
 public void setSalaire(double salaire) {
 	this.salaire = salaire;
+}
+
+
+private Departement departement;
+public Employee(String nomEmployee, String prenomEmployee, double salaire, Departement departement) {
+	super();
+	this.nomEmployee = nomEmployee;
+	this.prenomEmployee = prenomEmployee;
+	this.salaire = salaire;
+	this.departement = departement;
+}
+public Departement getDepartement() {
+	return departement;
+}
+public void setDepartement(Departement departement) {
+	this.departement = departement;
 }
 
 

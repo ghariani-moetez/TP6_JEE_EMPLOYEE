@@ -31,6 +31,15 @@
  <label class="control-label">Salaire :</label>
  <input type="text" name="salaire" class="form-control"/>
  </div>
+ <div class="form-group">
+  <label class="control-label">Departement :</label>
+ 
+<select name="departement" class="form-control">
+<c:forEach items="${depModel.departements}" var="dep">
+<option value="${dep.idDep}">${dep.nomDep}</option>
+</c:forEach>
+</select>
+</div>
  <div>
  <button type="submit" class="btn btn-primary">Ajouter</button>
  </div>

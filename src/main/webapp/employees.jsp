@@ -25,7 +25,7 @@
  </form>
  <table class="table table-striped">
  <tr>
- <th>ID</th><th>Nom Employee</th><th>Prenom Employee</th><th>Salaire</th>
+ <th>ID</th><th>Nom Employee</th><th>Prenom Employee</th><th>Salaire</th><th>Catégorie</th>
  </tr>
  <c:forEach items="${model.employees}" var="p">
  <tr>
@@ -33,6 +33,7 @@
  <td>${p.nomEmployee }</td>
   <td>${p.prenomEmployee }</td>
  <td>${p.salaire }</td>
+ <td>${p.departement.nomDep }</td>
  <td><a onclick="return confirm('Etes-vous sûr ?')"
 href="supprimer.do?id=${p.idEmployee }">Supprimer</a></td>
  <td><a href="editer.do?id=${p.idEmployee }">Edit</a></td>
